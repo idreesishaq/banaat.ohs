@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Summary</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Attendance Tracker</a>
+    <a href="taught.html">Teacher Diary</a>
+    <a href="student.html">Student View</a>
+    <a href="summary.html" class="active">Attendance Summary</a>
+  </nav>
+
+  <h1>Attendance Summary</h1>
+
+  <section id="filters">
+    <select id="filterClassSummary"></select>
+    <button onclick="renderSummary()">Apply Filter</button>
+  </section>
+
+  <!-- <table id="summaryTable">
+    <thead>
+      <tr><th>Student</th><th>Total Days</th><th>Present Days</th><th>Attendance %</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table> -->
+
+  <table id="summaryTable">
+  <thead>
+    <tr>
+      <th onclick="sortSummaryTable('name')">Student &#x25B4;</th>
+      <th>Total Days</th>
+      <th>Present Days</th>
+      <th onclick="sortSummaryTable('percent')">Attendance % &#x25B4;</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+</body>
+</html>

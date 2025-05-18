@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="active">Attendance Tracker</a>
+    <a href="taught.html">Teacher Diary</a>
+    <a href="student.html">Student View</a>
+    <a href="summary.html">Attendance Summary</a>
+  </nav>
+
+
+
+  <h1>Student Attendance Tracker</h1>
+
+  <section id="filters">
+    <select id="filterClass"></select>
+    <select id="filterName"></select>
+    <input type="date" id="filterDate">
+    <button onclick="renderAttendance()">Apply Filters</button>
+  </section>
+
+  <table id="attendanceTable">
+    <thead>
+      <tr><th>Date</th><th>Class</th><th>Student Name</th><th>Present</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+
