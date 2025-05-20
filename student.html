@@ -8,13 +8,17 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Attendance Tracker</a>
-    <a href="taught.html">Teacher Diary</a>
-    <a href="student.html" class="active">Student View</a>
-    <a href="summary.html">Attendance Summary</a>
-  </nav>
-
+<nav>
+  <div class="nav-container">
+    <button id="menuToggle" class="hamburger">&#9776;</button> <!-- ☰ -->
+    <ul class="nav-links">
+      <li><a href="index.html">Attendance</a></li>
+      <li><a href="taught.html">Teacher Diary</a></li>
+      <li><a href="student.html" class="active">Student View</a></li>
+      <li><a href="summary.html">Summary</a></li>
+    </ul>
+  </div>
+</nav>
   <h1>Student Attendance + Taught Topics</h1>
 
   <section id="filters">

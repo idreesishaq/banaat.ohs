@@ -8,18 +8,23 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Attendance Tracker</a>
-    <a href="taught.html">Teacher Diary</a>
-    <a href="student.html">Student View</a>
-    <a href="summary.html" class="active">Attendance Summary</a>
-  </nav>
+<nav>
+  <div class="nav-container">
+    <button id="menuToggle" class="hamburger">&#9776;</button> <!-- ☰ -->
+    <ul class="nav-links">
+      <li><a href="index.html">Attendance</a></li>
+      <li><a href="taught.html">Teacher Diary</a></li>
+      <li><a href="student.html">Student View</a></li>
+      <li><a href="summary.html" class="active">Summary</a></li>
+    </ul>
+  </div>
+</nav>
 
   <h1>Attendance Summary</h1>
 
   <section id="filters">
     <select id="filterClassSummary"></select>
-    <button onclick="renderSummary()">Apply Filter</button>
+    <button onclick="renderAttendanceSummary()">Apply Filter</button>
   </section>
 
   <!-- <table id="summaryTable">
@@ -29,7 +34,8 @@
     <tbody></tbody>
   </table> -->
 
-  <table id="summaryTable">
+  <!-- updated -->
+  <!-- <table id="summaryTable">
   <thead>
     <tr>
       <th onclick="sortSummaryTable('name')">Student &#x25B4;</th>
@@ -39,7 +45,20 @@
     </tr>
   </thead>
   <tbody></tbody>
+</table> -->
+
+<table id="summaryTable">
+  <thead>
+    <tr>
+      <th onclick="sortSummary('studentName')">Student &#x25B4;</th>
+      <th>Total Days</th>
+      <th>Days Present</th>
+      <th onclick="sortSummary('percent')">Attendance % &#x25B4;</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
 </table>
+
 
 
 </body>
